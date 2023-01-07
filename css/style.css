@@ -207,7 +207,7 @@ button {
   background-color: rgba(0, 0, 0, 0);
 }
 .header__top .serch-line .submit-button, .header .logo .serch-line .submit-button, .header .serch .serch-line .submit-button, .header .login .serch-line .submit-button {
-  background-image: url(/images/lupa.svg);
+  background-image: url(../images/lupa.svg);
   background-repeat: no-repeat;
   background-position: center;
   padding: 10px;
@@ -217,7 +217,7 @@ button {
   width: 100%;
 }
 .header__top .serch-line .reset-button, .header .logo .serch-line .reset-button, .header .serch .serch-line .reset-button, .header .login .serch-line .reset-button {
-  background-image: url(/images/close.svg);
+  background-image: url(../images/close.svg);
   background-repeat: no-repeat;
   background-position: center;
   padding: 10px;
@@ -509,7 +509,7 @@ button {
 }
 .main__inner .right .card__link::before {
   margin: 0 5px 0 0;
-  content: url(/images/heart.svg);
+  content: url(../images/heart.svg);
 }
 .main__inner .right .card .rating__title {
   flex-grow: 1;

@@ -195,11 +195,6 @@ for (let i = 0; i < cardButtonList.length; i++) {
             countOfProduct.text(++counter);
         }
         let currentCardItem = cardButtonList[i].closest(".card__item");
-        console.log(currentCardItem.id);
-        console.log(currentCardItem.querySelector(".card__img"));
-        console.log(currentCardItem.querySelector(".card__summery"));
-        console.log(currentCardItem.querySelector(".price__wrapper"));
-       
     });
 }
 
