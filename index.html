@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopka</title>
+    <link rel="shortcut icon" href="./images/site-title-logo2.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/rating.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <section class="header__top">
+                    <div class="adapt-container-RENAME">
+                        <a class="logo-link" href="#">
+                            <img class="logo-link__img" src="./images/logo.svg" alt="логотип">
+                        </a>
+                        <button class="burger-btn">&Xi;</button>
+                    </div>
+                    <div class="adapt2-container-RENAME">
+                        
+                        <div class="logo">
+                            <a class="logo-button__link" href="#">
+                                Sell on Shopka
+                            </a>
+                            <a class="logo-button__link" href="#">
+                                Register
+                            </a>
+                        </div>
+                        <form class="serch">
+                            <div class="serch-line">
+                                <input class="submit-button" type="submit" id="submit-button" name="submit-button" value="">
+                                <input class="text-input" type="text" id="text-input" name="text-input"
+                                    minlength="4" maxlength="40" size="10">
+                                <input class="reset-button" type="reset" id="reset-button" name="reset-button" value="">    
+                            </div>
+                            <a class="some-text-button__link" href="#">
+                                Consumer electronics
+                            </a>
+                        </form>
+                        <div class="login">
+                            <a class="login__link some-button" href="#">
+                                Sign In
+                            </a>
+                            <a class="login__link some-button" id="my-cart" href="#">
+                                My cart
+                                <span class="count-product">0</span>
+                            </a>
+                            <a class="login__link" href="#">
+                                <img class="user__img" src="./images/user-photo.jpg" alt="фотка юзера">
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="bucket">
+                        <div class="bucket__inner">
+                            <div class="bucket__header">
+                                <h3 class="bucket__title">My Cart</h3>
+                                <span class="close" id="close-button">&times;</span>
+                            </div>
+                            <div class="bucket__main">
+                                <h4 class="no-item__text">No products yet!</h4>
+                                <ul class="product__list">
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="header__bot">
+                    <div class="container">
+                        <nav class="menu">
+                            <a class="menu-accordion some-button" href="#">Categories</a>
+                            <ul class="list">
+                                <li class="list__item">
+                                    <a href="#" class="product-link">
+                                        <img src="./images/product-link/1.svg" alt="product-ico" class="product-link__img">
+                                        <h3 class="product-link__title">Clothing & Shoes</h3>
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="product-link">
+                                        <img src="./images/product-link/2.svg" alt="product-ico" class="product-link__img">
+                                        <h3 class="product-link__title">Entertainment</h3>
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="product-link">
+                                        <img src="./images/product-link/3.svg" alt="product-ico" class="product-link__img">
+                                        <h3 class="product-link__title">Music</h3>
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="product-link">
+                                        <img src="./images/product-link/4.svg" alt="product-ico" class="product-link__img">
+                                        <h3 class="product-link__title">Sport & Lifestyle</h3>
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="product-link">
+                                        <img src="./images/product-link/5.svg" alt="product-ico" class="product-link__img">
+                                        <h3 class="product-link__title">Pets</h3>
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="product-link">
+                                        <img src="./images/product-link/6.svg" alt="product-ico" class="product-link__img">
+                                        <h3 class="product-link__title">Kitchen Accessories</h3>
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="product-link">
+                                        <img src="./images/product-link/7.svg" alt="product-ico" class="product-link__img">
+                                        <h3 class="product-link__title">Travel Equipment</h3>
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="product-link">
+                                        <img src="./images/product-link/8.svg" alt="product-ico" class="product-link__img">
+                                        <h3 class="product-link__title">Growing & Garden</h3>
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="product-link">
+                                        <img src="./images/product-link/9.svg" alt="product-ico" class="product-link__img">
+                                        <h3 class="product-link__title">Electrical Tools</h3>
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="product-link">
+                                        <img src="./images/product-link/10.svg" alt="product-ico" class="product-link__img">
+                                        <h3 class="product-link__title">Mother Care</h3>
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="product-link">
+                                        <img src="./images/product-link/11.svg" alt="product-ico" class="product-link__img">
+                                        <h3 class="product-link__title">Toys & Entertainmnet</h3>
+                                    </a>
+                                </li>
+                                <li class="list__item">
+                                    <a href="#" class="product-link">
+                                        <img src="./images/product-link/12.svg" alt="product-ico" class="product-link__img">
+                                        <h3 class="product-link__title">Vintage</h3>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="main__inner">
+                <aside class="left">      
+                    <span href="#" class="filter"> Filters</span>
+                    <ul class="accordion">
+                        <a class="accordion__link">Electronics</a>
+                        <li>
+                            <a class="accordion__link">Cell Phones & Smartphones</a>
+                            <div class="sub-panel">
+                                <ul class="product-category-list">
+                                    <li class="product-category__item"><a href="#">Cell Phone Accessories</a></li>
+                                    <li class="product-category__item"><a href="#">Cell Phone Gatgets</a></li>
+                                    <li class="product-category__item"><a href="#">Applications</a></li>
+                                    <li class="product-category__item"><a href="#">Smart Watches</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <a class="accordion__link">Business & Industrial</a>
+                        <li>
+                            <a class="accordion__link">Business</a>
+                            <div class="sub-panel">
+                                <ul class="product-category-list">
+                                    <li class="product-category__item"><a href="#">Money</a></li>
+                                    <li class="product-category__item"><a href="#">Stonks</a></li>
+                                   
+                                </ul>
+                            </div>
+                            <a class="accordion__link">Industrial</a>
+                            <div class="sub-panel">
+                                <ul class="product-category-list">
+                                    <li class="product-category__item"><a href="#">Factory</a></li>
+                                    <li class="product-category__item"><a href="#">Buildings</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                        <a class="accordion__link">Computers</a>
+                        <li>
+                            <a class="accordion__link">Complecte</a>
+                            <div class="sub-panel">
+                                <ul class="product-category-list">
+                                    <li class="product-category__item"><a href="#">Vidoadepters</a></li>
+                                    <li class="product-category__item"><a href="#">RAM</a></li>
+                                    <li class="product-category__item"><a href="#">Drive</a></li>
+                                    <li class="product-category__item"><a href="#">Mother Boards</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <a class="accordion__link">Consumer Electroinics</a>
+                        <li>
+                            <a class="accordion__link">Complecte</a>
+                            <div class="sub-panel">
+                                <ul class="product-category-list">
+                                    <li class="product-category__item"><a href="#">Vidoadepters</a></li>
+                                    <li class="product-category__item"><a href="#">RAM</a></li>
+                                    <li class="product-category__item"><a href="#">Drive</a></li>
+                                    <li class="product-category__item"><a href="#">Mother Boards</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <a class="accordion__link">Home & Garden</a>
+                        <li>
+                            <a class="accordion__link">Complecte</a>
+                            <div class="sub-panel">
+                                <ul class="product-category-list">
+                                    <li class="product-category__item"><a href="#">Vidoadepters</a></li>
+                                    <li class="product-category__item"><a href="#">RAM</a></li>
+                                    <li class="product-category__item"><a href="#">Drive</a></li>
+                                    <li class="product-category__item"><a href="#">Mother Boards</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <a class="accordion__link">Collectibles</a>
+                        <li>
+                            <a class="accordion__link">Complecte</a>
+                            <div class="sub-panel">
+                                <ul class="product-category-list">
+                                    <li class="product-category__item"><a href="#">Vidoadepters</a></li>
+                                    <li class="product-category__item"><a href="#">RAM</a></li>
+                                    <li class="product-category__item"><a href="#">Drive</a></li>
+                                    <li class="product-category__item"><a href="#">Mother Boards</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="accordion">
+                        <a class="accordion__link2">Expand Filtres</a>
+                        <ul class="checkbox-list">
+                            <li class="checkbox-list__item">
+                                <input type="checkbox"> Recommended
+                            </li>
+                            <li class="checkbox-list__item">
+                                <input type="checkbox"> Recently Added
+                            </li>
+                            <li class="checkbox-list__item">
+                                <input type="checkbox"> Expiring Soon
+                            </li>
+                            <li class="checkbox-list__item">
+                                <input type="checkbox"> Most Rated
+                            </li>
+                            <li class="checkbox-list__item">
+                                <input type="checkbox"> Price: Low → High
+                            </li>
+                            <li class="checkbox-list__item">
+                                <input type="checkbox"> Price: High → Low
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="accordion">
+                        <a class="accordion__link2">Year of manufacturing</a>
+                        <ul class="checkbox-list">
+                            <li class="checkbox-list__item">
+                                <input type="checkbox" name="" id=""> 2019
+                            </li>
+                            <li class="checkbox-list__item">
+                                <input type="checkbox" name="" id=""> 2020
+                            </li>
+                            <li class="checkbox-list__item">
+                                <input type="checkbox" name="" id=""> 2021
+                            </li>
+                            <li class="checkbox-list__item">
+                                <input type="checkbox" name="" id=""> 2022
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="filter-slider some-button"></button>
+                </aside>
+                <section class="right">
+                    <div class="sortby">
+                        <div class="sortby__selects">
+                           <select name="first-select" id="first-select">
+                            <option value="1">Useless first</option>
+                            <option value="2">Useless first</option>
+                           </select>
+                           <select name="second-select" id="first-select">
+                            <option value="1">Condition</option>
+                            <option value="2">Condition</option>
+                           </select>
+                           <select name="third-select" id="first-select">
+                            <option value="1">Delivery options</option>
+                            <option value="2">Delivery options</option>
+                           </select>
+                        </div>
+                        <div class="sortby__links">
+                            <ul class="list">
+                                <li><a class="sortby__link some-button sortby--active" href="#">Show all</a></li>
+                                <li><a class="sortby__link some-button" href="#">Auction</a></li>
+                                <li><a class="sortby__link some-button" href="#">Buy now</a></li>
+                                <li><a class="sortby__link2 some-button sortby--active" href="#"><img class="sortby__img translatefix" src="./images/sortby-grid.svg"></a></li>
+                                <li><a class="sortby__link2 some-button" href="#"><img class="sortby__img" src="./images/sortby-list.svg" ></a></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="related">
+                        <span>Related</span>
+                        <ul class="related__list">
+                            <li class="related__item"><a href="#" class="related__link">worldwide shipping</a></li>
+                            <li class="related__item"><a href="#" class="related__link">under $50</a></li>
+                        </ul>
+                    </div>
+                    <ul class="card">
+                        <li class="card__item">
+                            <div class="info-container">
+                                <img src="./images/product-images/image8.jpg" alt="Wrong Img" class="card__img">
+                                <p class="card__summery">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia quaerat sint sed accusamus!  </p>
+                            </div>
+                            <div class="price-container">
+                                <p class="price__wrapper">
+                                    <span class="card__price">300</span>
+                                </p>
+                                <span class="card__discount"></span>
+                            </div>
+                            <div class="interactive-container">
+                                <span class="rating__title">Rating:</span>
+                                <div class="star-rating">
+                                    <input type="radio" name="example" class="rating" value="1" />
+                                    <input type="radio" name="example" class="rating" value="2" />
+                                    <input type="radio" name="example" class="rating" value="3" />
+                                    <input type="radio" name="example" class="rating" value="4" />
+                                    <input type="radio" name="example" class="rating" value="5" />
+                                </div>
+                                <p class="star-value">0</p>
+                            </div>
+                            <a href="#" class="card__link some-button">Watch</a>
+                        </li>
+                        <li class="card__item">
+                            <div class="info-container">
+                                <img src="./images/product-images/image1.jpg" alt="Wrong Img" class="card__img">
+                                <p class="card__summery">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia quaerat sint sed accusamus!  </p>
+                            </div>
+                            <div class="price-container">
+                                <p class="price__wrapper">
+                                    <span class="card__price">300</span>
+                                </p>
+                                <span class="card__discount"></span>
+                            </div>
+                            <div class="interactive-container">
+                                <span class="rating__title">Rating:</span>
+                                <div class="star-rating">
+                                    <input type="radio" name="example" class="rating" value="1" />
+                                    <input type="radio" name="example" class="rating" value="2" />
+                                    <input type="radio" name="example" class="rating" value="3" />
+                                    <input type="radio" name="example" class="rating" value="4" />
+                                    <input type="radio" name="example" class="rating" value="5" />
+                                </div>
+                                <p class="star-value">0</p>
+                            </div>
+                            <a href="#" class="card__link some-button">Watch</a>
+                        </li>
+                        <li class="card__item">
+                            <div class="info-container">
+                                <img src="./images/product-images/image2.jpg" alt="Wrong Img" class="card__img">
+                                <p class="card__summery">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia quaerat sint sed accusamus!  </p>
+                            </div>
+                            <div class="price-container">
+                                <p class="price__wrapper">
+                                    <span class="card__price">300</span>
+                                </p>
+                                <span class="card__discount"></span>
+                            </div>
+                            <div class="interactive-container">
+                                <span class="rating__title">Rating:</span>
+                                <div class="star-rating">
+                                    <input type="radio" name="example" class="rating" value="1" />
+                                    <input type="radio" name="example" class="rating" value="2" />
+                                    <input type="radio" name="example" class="rating" value="3" />
+                                    <input type="radio" name="example" class="rating" value="4" />
+                                    <input type="radio" name="example" class="rating" value="5" />
+                                </div>
+                                <p class="star-value">0</p>
+                            </div>
+                            <a href="#" class="card__link some-button">Watch</a>
+                        </li>
+                        <li class="card__item">
+                            <div class="info-container">
+                                <img src="./images/product-images/image3.jpg" alt="Wrong Img" class="card__img">
+                                <p class="card__summery">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia quaerat sint sed accusamus!  </p>
+                            </div>
+                            <div class="price-container">
+                                <p class="price__wrapper">
+                                    <span class="card__price">300</span>
+                                </p>
+                                <span class="card__discount"></span>
+                            </div>
+                            <div class="interactive-container">
+                                <span class="rating__title">Rating:</span>
+                                <div class="star-rating">
+                                    <input type="radio" name="example" class="rating" value="1" />
+                                    <input type="radio" name="example" class="rating" value="2" />
+                                    <input type="radio" name="example" class="rating" value="3" />
+                                    <input type="radio" name="example" class="rating" value="4" />
+                                    <input type="radio" name="example" class="rating" value="5" />
+                                </div>
+                                <p class="star-value">0</p>
+                            </div>
+                            <a href="#" class="card__link some-button">Watch</a>
+                        </li>
+                        <li class="card__item">
+                            <div class="info-container">
+                                <img src="./images/product-images/image4.jpg" alt="Wrong Img" class="card__img">
+                                <p class="card__summery">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia quaerat sint sed accusamus!  </p>
+                            </div>
+                            <div class="price-container">
+                                <p class="price__wrapper">
+                                    <span class="card__price">300</span>
+                                </p>
+                                <span class="card__discount"></span>
+                            </div>
+                            <div class="interactive-container">
+                                <span class="rating__title">Rating:</span>
+                                <div class="star-rating">
+                                    <input type="radio" name="example" class="rating" value="1" />
+                                    <input type="radio" name="example" class="rating" value="2" />
+                                    <input type="radio" name="example" class="rating" value="3" />
+                                    <input type="radio" name="example" class="rating" value="4" />
+                                    <input type="radio" name="example" class="rating" value="5" />
+                                </div>
+                                <p class="star-value">0</p>
+                            </div>
+                            <a href="#" class="card__link some-button">Watch</a>
+                        </li>
+                        <li class="card__item">
+                            <div class="info-container">
+                                <img src="./images/product-images/image7.jpg" alt="Wrong Img" class="card__img">
+                                <p class="card__summery">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia quaerat sint sed accusamus!  </p>
+                            </div>
+                            <div class="price-container">
+                                <p class="price__wrapper">
+                                    <span class="card__price">300</span>
+                                </p>
+                                <span class="card__discount"></span>
+                            </div>
+                            <div class="interactive-container">
+                                <span class="rating__title">Rating:</span>
+                                <div class="star-rating">
+                                    <input type="radio" name="example" class="rating" value="1" />
+                                    <input type="radio" name="example" class="rating" value="2" />
+                                    <input type="radio" name="example" class="rating" value="3" />
+                                    <input type="radio" name="example" class="rating" value="4" />
+                                    <input type="radio" name="example" class="rating" value="5" />
+                                </div>
+                                <p class="star-value">0</p>
+                            </div>
+                            <a href="#" class="card__link some-button">Watch</a>
+                        </li>
+                        <li class="card__item">
+                            <div class="info-container">
+                                <img src="./images/product-images/image5.jpg" alt="Wrong Img" class="card__img">
+                                <p class="card__summery">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia quaerat sint sed accusamus!  </p>
+                            </div>
+                            <div class="price-container">
+                                <p class="price__wrapper">
+                                    <span class="card__price">300</span>
+                                </p>
+                                <span class="card__discount"></span>
+                            </div>
+                            <div class="interactive-container">
+                                <span class="rating__title">Rating:</span>
+                                <div class="star-rating">
+                                    <input type="radio" name="example" class="rating" value="1" />
+                                    <input type="radio" name="example" class="rating" value="2" />
+                                    <input type="radio" name="example" class="rating" value="3" />
+                                    <input type="radio" name="example" class="rating" value="4" />
+                                    <input type="radio" name="example" class="rating" value="5" />
+                                </div>
+                                <p class="star-value">0</p>
+                            </div>
+                            <a href="#" class="card__link some-button">Watch</a>
+                        </li>
+                        <li class="card__item">
+                            <div class="info-container">
+                                <img src="./images/product-images/image6.jpg" alt="Wrong Img" class="card__img">
+                                <p class="card__summery">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia quaerat sint sed accusamus!  </p>
+                            </div>
+                            <div class="price-container">
+                                <p class="price__wrapper">
+                                    <span class="card__price">300</span>
+                                </p>
+                                <span class="card__discount"></span>
+                            </div>
+                            <div class="interactive-container">
+                                <span class="rating__title">Rating:</span>
+                                <div class="star-rating">
+                                    <input type="radio" name="example" class="rating" value="1" />
+                                    <input type="radio" name="example" class="rating" value="2" />
+                                    <input type="radio" name="example" class="rating" value="3" />
+                                    <input type="radio" name="example" class="rating" value="4" />
+                                    <input type="radio" name="example" class="rating" value="5" />
+                                </div>
+                                <p class="star-value">0</p>
+                            </div>
+                            <a href="#" class="card__link some-button">Watch</a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+       <a href="#"> Shopka.shop@contactus.ua</a>
+    </footer>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="/js/rating.js"></script>
+<script src="./js/main.js"></script>
+</html>
