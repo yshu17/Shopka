@@ -141,6 +141,9 @@ button {
   text-align: center;
   display: none;
 }
+.burger-btn::after {
+  content: "Ξ";
+}
 
 .adapt-container-RENAME {
   display: flex;
@@ -596,6 +599,10 @@ footer {
   }
   .burger-btn {
     display: block;
+  }
+  .burger-btn.active::after {
+    content: "×";
+    font-size: xx-large;
   }
   .adapt-container-RENAME {
     position: relative;
