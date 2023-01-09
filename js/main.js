@@ -6,11 +6,14 @@ function PercentageСalс(value,percent)
 { 
     return parseInt(value, 10)-(parseInt(value, 10) / 100 * parseInt(percent, 10));
 }
-//pluguns JQ
+
+//-------------JQ-plugins---------------//
+//Звездные рейтинг
 $('.star-rating').rating(function(vote,event){    
     $(event.target).closest($('.interactive-container')).find($('.star-value')).text(vote);
-}); //звездные рейтинг
+}); 
 
+//Слайдер для аккордиона Carigories
 $('.menu-accordion').click(function() {
   
     if ($(this).parent().find('ul').length) {
@@ -18,9 +21,7 @@ $('.menu-accordion').click(function() {
       return false;
     }
 
-  }); //слайдер для аккордиона
-
-////
+}); 
 
 ReplaceImgToSvg("img.product-img");
 ReplaceImgToSvg("img.sortby__img");
@@ -56,15 +57,15 @@ function ReplaceImgToSvg(className)
     });
 }
 
+//-----------------------------------------//
 
-TurnAccordion(document.querySelectorAll(".accordion__link"), true, "block");
-TurnAccordion(document.querySelectorAll(".accordion__link2"), false, "block");
-function TurnAccordion(array, isDisplayNone, displayType)
+TurnOnAccordion(document.querySelectorAll(".accordion__link"), true, "block");
+TurnOnAccordion(document.querySelectorAll(".accordion__link2"), false, "block");
+function TurnOnAccordion(array, isDisplayNone, displayType)
 {
     for (let i = 0; i < array.length; i++) 
     {      
         if (isDisplayNone) {
-            
             array.forEach(element => {
                 element.nextElementSibling.style.display="none";
                 element.style.margin ="5px 0 10px 10px";
@@ -75,7 +76,6 @@ function TurnAccordion(array, isDisplayNone, displayType)
             array.forEach(element => {
                 element.nextElementSibling.style.display= displayType;
                 element.nextElementSibling.style.margin ="0px 0 5px 10px";
-               
             });
         }
         array[i].addEventListener("click", function(){
@@ -85,7 +85,6 @@ function TurnAccordion(array, isDisplayNone, displayType)
             {
                 panel.style.display = displayType;
                 panel.style.margin ="0px 0 5px 10px";
-               
             } 
             else
             {
@@ -101,7 +100,7 @@ function SetRandomRating(listOfStarRating){
         let rndInputRating = listOfStarRating[i].querySelectorAll(".rating")[RandomInt(1,5)]; //Math.floor(Math.random() * (max - min) ) + min
         rndInputRating.checked = true; 
         for (let j = 0; j < rndInputRating.value; j++) {
-        listOfStarRating[i].querySelectorAll(".star")[j].classList.add("fullStar");
+            listOfStarRating[i].querySelectorAll(".star")[j].classList.add("fullStar");
         }
         listOfStarRating[i].closest(".interactive-container").querySelector(".star-value").textContent = rndInputRating.value;
     }
@@ -145,8 +144,8 @@ function SetRandomDiscount(listOfDiscount)
     }
 }
 
-TurnsBucketModal(document.getElementById("close-button"),document.getElementById("my-cart"))
-function TurnsBucketModal(closeElement,openElement)
+TurnOnBucketModal(document.getElementById("close-button"),document.getElementById("my-cart"))
+function TurnOnBucketModal(closeElement,openElement)
 {
     closeElement.addEventListener("click",function(){
         if(document.querySelector(".bucket").style.display != "none")
@@ -158,27 +157,30 @@ function TurnsBucketModal(closeElement,openElement)
     })
 }
 
-let menuBtn = document.querySelector(".burger-btn");
-let menu = document.querySelector(".logo-buttons--wrapper");
-menuBtn.addEventListener("click", function(){
-	menuBtn.classList.toggle("active");
-    menu.classList.toggle("active");
-}) //burger
+TurnOnBurger(document.querySelector(".burger-btn"), document.querySelector(".logo-buttons--wrapper"))
+TurnOnBurger(document.querySelector(".filter-slider"), document.querySelector(".left"));
+function TurnOnBurger(onClickBtn , burger)
+{
+    onClickBtn.addEventListener("click", function(){
+        onClickBtn.classList.toggle("active");
+        burger.classList.toggle("active");
+    })
+    document.addEventListener( 'click', (e) => {
+        let withinBoundaries = e.composedPath().includes(onClickBtn);
+        if (!withinBoundaries) {
+            onClickBtn.classList.remove("active");
+            burger.classList.remove("active");
+        }
+    })
+}
 
-let filterSliderbtn = document.querySelector(".filter-slider");
-let aside = document.querySelector(".left");
-filterSliderbtn.addEventListener("click", function(){
-	filterSliderbtn.classList.toggle("active");
-    aside.classList.toggle("active");
-}) //burger
-
-////////////////////////////////////////////////////////
-
+////////////////////////Счетчик товара на кнопке MyCart/////////////////////////
+//Присвоение id всем карточкам
 var cardList = document.querySelectorAll(".card__item");
 for (let i = 0; i < cardList.length; i++) {
     cardList[i].setAttribute("id",`card__item_${i}`);
-}
-
+} 
+///Метод присвоения TODO: Вывести метод
 var cardButtonList = $(".card__link");
 var countOfProduct = $(".count-product");
 var counter = countOfProduct.text();

@@ -26,7 +26,6 @@ body
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
-    //background-color: rgb(24, 24, 24);
 }
 button
 {
@@ -38,7 +37,6 @@ button
     padding: 0 15px;
     margin: 0 auto;
 }
-
 .some-button
 {
     color: $my_blue_color;
@@ -54,17 +52,14 @@ button
         box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
         transition: all .3s;
     }
-    
 }
 .sortby__link,.sortby__link2
 {
-    
     font-size: medium;
     padding: 5px 20px ;
     background-color: rgba($my_blue_color,0.1);
     text-align: center;
     border:none;
-   
     svg>path
     {
         fill:$my_grey_color;
@@ -102,10 +97,8 @@ button
         border-radius: 15px;
         min-width: 350px;
         padding:10px 15px 20px;
-        
         .bucket__header
-        {
-            
+        {     
             .bucket__title{display: block;}
             display: flex; 
             justify-content: flex-start;
@@ -139,7 +132,6 @@ button
                 font-size: xx-large;
                 text-shadow:0px 0px 3px #4A4B57;
             }
-        
         }
     }
 }
@@ -177,7 +169,6 @@ button
     margin: 0 auto 10px;
     
 }
-
 .filter-slider
 {
     display: none;
@@ -188,18 +179,19 @@ button
     &::after{content: ">";}
 }
 
-
 //////////////////HEADER////////////////////
 .header
 {
-    .container{ max-width: 1920px; padding: 0 15px; }
-
+    .container
+    {
+        max-width: 1920px; 
+        padding: 0 15px; 
+    }
     &__top, .logo, .serch, .login
     {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         .logo
         {
             &-button__link
@@ -208,12 +200,10 @@ button
                 padding: 0 15px;
             }
         }
-
         .serch
         {
             justify-content: center; 
             flex-grow: 1;
-
             &-line
             {
                 display: flex;
@@ -258,21 +248,16 @@ button
                 padding: 0 15px;
             }
         }
-        
         .login
         {
-            color: $my_blue_color;
-            
+            color: $my_blue_color;  
             &__link
             {
                 position: relative;
                 transition:  .3s ease;
-
                 &:last-child{ border: none;} //user img link
-
                 &:not(:first-child)
                 { margin-left: 5px; }
-
                 .count-product
                 {
                     position: absolute;
@@ -289,10 +274,12 @@ button
                 }
             }
         }
-        
     }
-    &__top{ margin-bottom:15px; max-height: 90px;}
-
+    &__top
+    { 
+        margin-bottom:15px; 
+        max-height: 90px;
+    }
     &__bot
     {
         .container{ max-width: 1600px;padding: 0;}
@@ -352,8 +339,8 @@ button
         display: grid;
         grid-template-columns: 15% calc(85% - 50px);
         gap: 50px;
-        &>section:last-child{ border-left: 1px solid silver;}
-        
+        & > section:last-child{ 
+            border-left: 1px solid silver;}    
         .left
         { 
             display: flex;
@@ -373,8 +360,7 @@ button
                 width: 100%;
                 color: #4A4B57;
                 text-transform: uppercase;
-            }
-            
+            }        
             .accordion
             {
                 display: flex;
@@ -410,8 +396,7 @@ button
                     {
                         color: #2979FF;
                         transition: all .3s;
-                    }
-                    
+                    } 
                 }
                 &__link2
                 {
@@ -463,7 +448,6 @@ button
             }
             
         }
-
         .right
         {
             padding:0 15px ;
@@ -503,9 +487,7 @@ button
                         {
                             margin: 0 0 0 5px
                         }
-                        
                     }
-                    
                 }
             }
             .related
