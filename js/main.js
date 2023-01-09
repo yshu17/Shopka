@@ -22,7 +22,7 @@ $('.menu-accordion').click(function() {
 
 ////
 
-ReplaceImgToSvg("img.product-link__img");
+ReplaceImgToSvg("img.product-img");
 ReplaceImgToSvg("img.sortby__img");
 function ReplaceImgToSvg(className)
 {
@@ -159,7 +159,7 @@ function TurnsBucketModal(closeElement,openElement)
 }
 
 let menuBtn = document.querySelector(".burger-btn");
-let menu = document.querySelector(".adapt2-container-RENAME");
+let menu = document.querySelector(".logo-buttons--wrapper");
 menuBtn.addEventListener("click", function(){
 	menuBtn.classList.toggle("active");
     menu.classList.toggle("active");
