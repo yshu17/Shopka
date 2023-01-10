@@ -174,33 +174,25 @@ function TurnOnBurger(onClickBtn , burger)
     })
 }
 
-////////////////////////Счетчик товара на кнопке MyCart/////////////////////////
+AddCounterToBtn($(".card__link"), $(".count-product"));
+function AddCounterToBtn(cardButtonList,countOfProduct)
+{
+    var counter = countOfProduct.text();
+    countOfProduct.css("display","none");
+    for (let i = 0; i < cardButtonList.length; i++) {
+        cardButtonList[i].addEventListener('click', function(){
+            if(counter == 0)
+            {
+                countOfProduct.css("display","inline");
+                countOfProduct.text(++counter);
+            }
+            countOfProduct.text(++counter);
+        });
+    }
+}
+
 //Присвоение id всем карточкам
 var cardList = document.querySelectorAll(".card__item");
 for (let i = 0; i < cardList.length; i++) {
     cardList[i].setAttribute("id",`card__item_${i}`);
-} 
-///Метод присвоения TODO: Вывести метод
-var cardButtonList = $(".card__link");
-var countOfProduct = $(".count-product");
-var counter = countOfProduct.text();
-countOfProduct.css("display","none");
-
-for (let i = 0; i < cardButtonList.length; i++) {
-    cardButtonList[i].addEventListener('click', function(){
-        if(counter == 0)
-        {
-            countOfProduct.css("display","inline");
-            countOfProduct.text(++counter);
-        }
-        else{
-            countOfProduct.text(++counter);
-        }
-        let currentCardItem = cardButtonList[i].closest(".card__item");
-    });
 }
-
-
-
-
-
