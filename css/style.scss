@@ -818,5 +818,36 @@ footer
         justify-content: center;
     }
 }
+@media(max-width: 459px)
+{
+    .main__inner .right .sortby .list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        gap: 5px 10px;
+        &>li
+        {
+            display: inline-block; 
+            text-align: center;
+            &:last-child
+            {
+                grid-column: 3 / 4;
+            }
+        }
+    }
+    .main__inner .right .sortby__selects {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+       
+        &>select:not(:first-child) {
+            margin:0 ;
+        }
+        &>select:first-child
+        {
+            grid-column: 1/3;
+        }
+    }
+    
+}
 
 /// 
