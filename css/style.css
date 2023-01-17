@@ -177,6 +177,23 @@ button {
   content: ">";
 }
 
+.burger-btn {
+  position: relative;
+}
+.burger-btn .count-product {
+  position: absolute;
+  z-index: 1;
+  min-width: 27px;
+  font-size: large;
+  padding: 5px;
+  color: white;
+  text-align: center;
+  background-color: red;
+  border-radius: 100%;
+  transform: translatey(-15px) translatex(15px);
+  content: "";
+}
+
 .header .container {
   max-width: 1920px;
   padding: 0 15px;

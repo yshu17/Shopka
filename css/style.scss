@@ -178,7 +178,24 @@ button
     padding: 50px 5px;
     &::after{content: ">";}
 }
-
+.burger-btn
+{
+    position: relative;
+    .count-product
+    {
+        position: absolute;
+        z-index: 1;
+        min-width: 27px;
+        font-size: large;
+        padding: 5px;
+        color: white;
+        text-align: center;
+        background-color:red;
+        border-radius: 100%;
+        transform: translatey(-15px) translatex(15px);
+        content: "";
+    }
+}
 //////////////////HEADER////////////////////
 .header
 {
