@@ -120,12 +120,12 @@ function ShowActiveButton(listOfClass)
     }
 }
 
-SetRandomDiscount(document.querySelectorAll(".card__discount"))
-function SetRandomDiscount(listOfDiscount)
+SetRandomDiscount(document.querySelectorAll(".card__discount"), 5, 10)
+function SetRandomDiscount(listOfDiscount, minDiscount,maxDiscount)
 {
     listOfDiscount.forEach(element => {
         element.style.display="none";
-        element.textContent = RandomInt(5,90);
+        element.textContent = RandomInt(minDiscount,maxDiscount);
         listOfDiscount[RandomInt(0,listOfDiscount.length)].style.display="block"; 
     });
     for (let i = 0; i < listOfDiscount.length; i++) {
@@ -158,19 +158,24 @@ function TurnOnBucketModal(closeElement,openElement)
 }
 
 TurnOnBurger(document.querySelector(".burger-btn"), document.querySelector(".logo-buttons--wrapper"))
-TurnOnBurger(document.querySelector(".filter-slider"), document.querySelector(".left"));
+
 function TurnOnBurger(onClickBtn , burger)
+{
+    onClickBtn.addEventListener('click', function(e){ 
+        burger.classList.toggle('active') 
+    })
+    window.addEventListener('click', function(e){ 
+        if (!e.target.closest(`.${burger.className}`) && !e.target.closest(`.${onClickBtn.className}`)) { 
+            burger.classList.remove('active') 
+        }
+    })
+}
+TurnOnAside(document.querySelector(".filter-slider"), document.querySelector(".left"));
+function TurnOnAside(onClickBtn , burger)
 {
     onClickBtn.addEventListener("click", function(){
         onClickBtn.classList.toggle("active");
         burger.classList.toggle("active");
-    })
-    document.addEventListener( 'click', (e) => {
-        let withinBoundaries = e.composedPath().includes(onClickBtn);
-        if (!withinBoundaries) {
-            onClickBtn.classList.remove("active");
-            burger.classList.remove("active");
-        }
     })
 }
 
